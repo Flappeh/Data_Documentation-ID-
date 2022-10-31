@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tigergraph &mdash; Data_Documentation 0.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Test" href="Test.html" />
+    <link rel="prev" title="Welcome to Data Team’s Documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Data_Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tigergraph</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#interactive-installation">Interactive Installation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-extract-the-package">Step 1  : Extract the package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-run-installation-script">Step 2: Run installation script</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-configure-cluster-settings">Step 3: Configure cluster settings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#non-interactive-installation-used">Non-Interactive Installation (used)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Step 1  : Extract the package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-configure-installation-settings">Step 2: Configure installation settings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Test.html">Test</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Data_Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Tigergraph</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Tigergraph.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tigergraph">
+<h1>Tigergraph<a class="headerlink" href="#tigergraph" title="Permalink to this heading"></a></h1>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
+<a class="reference internal image-reference" href="_images/TGLogo.png"><img alt="TigerGraph Logo" src="_images/TGLogo.png" style="width: 800px;" /></a>
+<p>There are a few requirements before installing TigerGraph in your system :</p>
+<ol class="arabic simple">
+<li><p>You need to have at least one machine that fulfills the minimum requirements for hardware and software.</p></li>
+<li><p>Access to Linux Super User with the same credentials on every machines.</p></li>
+<li><p>License Key provided by TigerGraph.</p></li>
+<li><p>TigerGraph system package, you can ask for this if you don’t have it.</p></li>
+<li><p>If you choose to use cluster, make sure that every conected machines have the same SSH port and it’s has
+to be opened while the installation process still running.</p></li>
+</ol>
+<p>There are two ways for you to install TigerGraph which are Non-Interactive Installation and Interactive Installation.
+In this case, we use Non-Interactive Installation.</p>
+<section id="interactive-installation">
+<h3>Interactive Installation<a class="headerlink" href="#interactive-installation" title="Permalink to this heading"></a></h3>
+<p>Interactive installation allows the user to choose a username and installation file paths besides the defaults.
+The filename of your package may vary depending on the product edition and version. For the examples here, we use
+the filename tigergraph-&lt;version&gt;.tar.gz, which should be replaced by the actual filename of your package.</p>
+<section id="step-1-extract-the-package">
+<h4>Step 1  : Extract the package<a class="headerlink" href="#step-1-extract-the-package" title="Permalink to this heading"></a></h4>
+<p>Extract TigerGraph package <code class="docutils literal notranslate"><span class="pre">tigergraph-&lt;version&gt;-offline</span></code> into a folder using this command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>tar -xzf tigergraph-&lt;version&gt;.tar.gz
+</pre></div>
+</div>
+</section>
+<section id="step-2-run-installation-script">
+<h4>Step 2: Run installation script<a class="headerlink" href="#step-2-run-installation-script" title="Permalink to this heading"></a></h4>
+<p>Navigate to the <code class="docutils literal notranslate"><span class="pre">tigergraph-&lt;version&gt;-offline</span></code> folder and run the install.sh script with the following commands:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span> tigergraph-&lt;version&gt;-offline
+<span class="gp"># </span>to install enterprise license
+<span class="gp">$ </span>sudo ./install.sh
+</pre></div>
+</div>
+<p>The installer will ask for the following information. You may choose to hit Enter to skip and use the system default or enter a new value:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Your agreement to the License Terms and Conditions</p></li>
+<li><p>Your license key (not applicable for Enterprise Free)</p></li>
+<li><p>Username for the Linux user who will own and manage the TigerGraph platform</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>The installer creates a Linux user with this username who is the only authorized user that can run
+gadmin commands to manage the TigerGraph Platform. If the installation and data folders are modified
+from their defaults, the newly created user must have</p></li>
+<li><p>appropriate permissions for these folders. The installation folder requires read/write/execute access,
+and the other folders require read/write access.</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><p>Password for the Linux user who will own and manage the TigerGraph platform</p></li>
+<li><p>Path to where the installation folder will be</p></li>
+<li><p>Path to where the data folder will be</p></li>
+<li><p>Path to where the log folder will be</p></li>
+<li><p>Path to where the temp folder will be</p></li>
+<li><p>The SSH port for your machine</p></li>
+</ol>
+</div></blockquote>
+</section>
+<section id="step-3-configure-cluster-settings">
+<h4>Step 3: Configure cluster settings<a class="headerlink" href="#step-3-configure-cluster-settings" title="Permalink to this heading"></a></h4>
+<p>TigerGraph cluster configuration enables the graph database to be partitioned and distributed across multiple
+server nodes in a local network. After you have answered the questions described in the previous step, the installation
+script will ask for the following to complete cluster configuration:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>The number of nodes in your cluster. Each node will be given an alias following the input (m1, m2, m3, etc.)</p>
+<ul class="simple">
+<li><p>If this is a single-node installation, enter 1</p></li>
+</ul>
+</li>
+<li><p>The IP address of each node</p></li>
+<li><p>Username and credentials information of the sudo user</p>
+<ul class="simple">
+<li><p>Every machine in the cluster must have a sudo user with the same username and password or SSH key.</p></li>
+</ul>
+</li>
+<li><p>Permission to set NTP time synchronization</p></li>
+<li><p>Permission to set firewall rules among the cluster nodes</p></li>
+</ol>
+</div></blockquote>
+<p>After all the questions are answered, the script will proceed to installation as shown in this screenshot:</p>
+<a class="reference internal image-reference" href="_images/FinishedScirpt.png"><img alt="Script Example" src="_images/FinishedScirpt.png" style="width: 800px;" /></a>
+<p>Step 4: Verify installation
+After installation is complete, you can switch to the Linux user who owns the platform (created in <span class="xref std std-ref">Step 2</span>) with the following command :</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>su &lt;username&gt;  <span class="c1"># default username: tigergraph</span>
+</pre></div>
+</div>
+<p>After switching user correctly, you can confirm successful installation using <code class="docutils literal notranslate"><span class="pre">gadmin</span> <span class="pre">status</span></code>.</p>
+</section>
+</section>
+<section id="non-interactive-installation-used">
+<h3>Non-Interactive Installation (used)<a class="headerlink" href="#non-interactive-installation-used" title="Permalink to this heading"></a></h3>
+<p>There are a few steps needed to be done in order to have TigerGraph running in your system:</p>
+<section id="id1">
+<h4>Step 1  : Extract the package<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
+<p>Extract TigerGraph package <code class="docutils literal notranslate"><span class="pre">tigergraph-&lt;version&gt;-offline</span></code> into a folder using this command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>tar -xzf tigergraph-&lt;version&gt;.tar.gz
+</pre></div>
+</div>
+</section>
+<section id="step-2-configure-installation-settings">
+<h4>Step 2: Configure installation settings<a class="headerlink" href="#step-2-configure-installation-settings" title="Permalink to this heading"></a></h4>
+<p>Navigate to the <code class="docutils literal notranslate"><span class="pre">tigergraph-&lt;version&gt;-offline</span></code> folder and find a file named <code class="docutils literal notranslate"><span class="pre">install_conf.json</span></code>. For Non-interactive
+installation, you must review and modify <code class="docutils literal notranslate"><span class="pre">install_conf.json</span></code> file before running the installer.</p>
+<p>This is an example <code class="docutils literal notranslate"><span class="pre">install_conf.json</span></code> file :</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;BasicConfig&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;TigerGraph&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;Username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tigergraph&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;Password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tigergraph&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;SSHPort&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;PrivateKeyFile&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;PublicKeyFile&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;RootDir&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;AppRoot&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/home/tigergraph/tigergraph/app&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;DataRoot&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/home/tigergraph/tigergraph/data&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;LogRoot&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/home/tigergraph/tigergraph/log&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;TempRoot&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/home/tigergraph/tigergraph/tmp&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;License&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJJc3N1ZXIiOiJUaWdlckdyYXBoIEluYy4iLCJBdWRpZW5jZSI6IlRpZ2VyR3JhcGggRnJlZS</span>
+<span class="s2">        IsIlN0YXJ0VGltZSI6MTYxNzM1NTgwMywiRW5kVGltZSI6MTY1MTQ4NzQwMywiSXNzdWVUaW1lIjoxNjE3MzU5NDAzLCJFZGl0aW9uIjoiRW50ZXJwcmlzZSIsIl</span>
+<span class="s2">        ZlcnNpb24iOiJBbGwiLCJIb3N0Ijp7Ik1heENQVUNvcmUiOjEwMDAwMDAwMDAwMDAwMDAsIk1heFBoeXNpY2FsTWVtb3J5Qnl0ZXMiOjEwMDAwMDAwMDAwMDAwMD</span>
+<span class="s2">        AsIk1heENsdXN0ZXJOb2RlTnVtYmVyIjoxMDI0fSwiVG9wb2xvZ3kiOnsiTWF4VmVydGV4TnVtYmVyIjoxMDAwMDAwMDAwMDAwMDAwLCJNYXhFZGdlTnVtYmVyIj</span>
+<span class="s2">        oxMDAwMDAwMDAwMDAwMDAwLCJNYXhHcmFwaE51bWJlciI6MTAyNCwiTWF4VG9wb2xvZ3lCeXRlcyI6NTM2ODcwNjM3MTJ9LCJHU1QiOnsiRW5hYmxlIjp0cnVlLC</span>
+<span class="s2">        Jab29tQ2hhcnRzTGljZW5zZSI6IntcbiAgXCJsaWNlbnNlXCI6IFwiWkNCLTRtZmk3NDRsdjogWm9vbUNoYXJ0cyBFbnRlcnByaXNlIGxpY2VuY2UgZm9yIFRpZ2</span>
+<span class="s2">        VyR3JhcGggZm9yIG9mZmxpbmUgdXNlOyB1cGdyYWRlcyB1bnRpbDogMjAyMi0xMi0zMVwiLFxuICBcImxpY2Vuc2VLZXlcIjogXCI4Zjg2ZWQzM2Y0ZWJmYmE4YT</span>
+<span class="s2">        I4NjlkZGUzMmYzYTMwZGI4NGEzOTgxYmEzNmZhZWZlYTMxNDhhYzY4MzkxZTlhYzUzZDU3YmI5MjdmNjY5YWI1ZWJhYzJhYmQ3YTFkNDBiM2UxNDRmZjIwMDYyZW</span>
+<span class="s2">        NiZmIwZjJiN2I0ZWFmZWIwYzU2NTc2NjBhZGExZDc1MWNhODU3NWZhYTE1ZWQwODI0NzkwZWQxMjJkY2Q4NjcyZTJiN2QzN2MwNmE3MzFhYTc2MDIwM2FhYmMwYj</span>
+<span class="s2">        YzOWEzMjBhOGQxNmI0YmFiNGY5NTJiNTMwOTUzMWI4MDkxNjYwZDVjOGMzNGY0NmMyNjZiOGZiNzc2YzFmN2Y0MTdlMGQ5Y2JkZGFlOTExNTFlY2Y3YmMzZDlkND</span>
+<span class="s2">        gyNWE2MjAwYzk0MWMyMDE4ZDY4YjkyOWE5ZWY2MzQ2MDE5NjFhYmU1MGI0ZTk0ZmY5Y2VjMjA1ODEwYmVlZmRkM2NlZDU2YjM5NTVjYmE0YWIyMGNiNzc5MWE0Nm</span>
+<span class="s2">        QxNzIwMzNiZmI0ZDIyMDM4ODZhZTllZDFkOWMzOWIyOTM2ODc3Yjc2NzY4ZjQwNWQ5Y2MwY2JlODVjOTE2NDllMDI5YTA0NDFlOGFmYjA2MzY4MTMxZGM1YTc1ND</span>
+<span class="s2">        EyOTc1NjFlMDRlMGM1MzE1ZmFjMDdhYzViOWViM1wiXG59In0sIlJ1bnRpbWVNZW1vcnkiOnsiTWF4VXNlclJlc2lkZW50U2V0Qnl0ZXMiOjEwMDAwMDAwMDAwMD</span>
+<span class="s2">        AwMDB9fQ.B1tR-ZyzFB3WCtCXBl-CXb-3YlL1Hy1btCzsEnkLd6GE2AOvJdpqVZGU-YGyIaOGSYX1sbjrePBoupuWPwrOgvce-mq_Qwp8eounoEOkuzYlTQXFj3l</span>
+<span class="s2">        M1wO6vrdiOn2GUm0qMVtlVTIDrFZlZ-bWcdSUA4J8t2JNJrYxQgPWjlO9f4I4w2RbTK3sZW7N96bqFUQPituiwLcPX_VSVT8KBluM2WIH7CJitHl21IbnQbwScBw</span>
+<span class="s2">        _QgjfaITZXE6UXisMM9XNphf5yQX9arFDQLchV7e2i3R2tUEuF7V_mHFrVa8vCBjm_0uABzcY8U02QJ78SB9MgLNrqgtzIwHmYP22KQ&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;NodeList&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;m1: 127.0.0.1&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;AdvancedConfig&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;ClusterConfig&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;LoginConfig&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;SudoUser&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sudoUserName&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;Method&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;P[or K]&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;P&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;sudo_user_password&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;K&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;/path/to/my_key.pem_rsa&gt;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;ReplicationFactor&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Data Team’s Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Test.html" class="btn btn-neutral float-right" title="Test" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, David.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

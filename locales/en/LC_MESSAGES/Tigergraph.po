@@ -1,0 +1,256 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, David
+# This file is distributed under the same license as the Data_Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Data_Documentation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-31 10:43+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../Tigergraph.rst:2
+msgid "Tigergraph"
+msgstr ""
+
+#: ../../Tigergraph.rst:5
+msgid "Installation"
+msgstr ""
+
+#: ../../Tigergraph.rst:-1
+msgid "TigerGraph Logo"
+msgstr ""
+
+#: ../../Tigergraph.rst:11
+msgid "There are a few requirements before installing TigerGraph in your system :"
+msgstr ""
+
+#: ../../Tigergraph.rst:13
+msgid ""
+"You need to have at least one machine that fulfills the minimum "
+"requirements for hardware and software."
+msgstr ""
+
+#: ../../Tigergraph.rst:15
+msgid "Access to Linux Super User with the same credentials on every machines."
+msgstr ""
+
+#: ../../Tigergraph.rst:17
+msgid "License Key provided by TigerGraph."
+msgstr ""
+
+#: ../../Tigergraph.rst:19
+msgid "TigerGraph system package, you can ask for this if you don't have it."
+msgstr ""
+
+#: ../../Tigergraph.rst:21
+msgid ""
+"If you choose to use cluster, make sure that every conected machines have"
+" the same SSH port and it's has to be opened while the installation "
+"process still running."
+msgstr ""
+
+#: ../../Tigergraph.rst:24
+msgid ""
+"There are two ways for you to install TigerGraph which are Non-"
+"Interactive Installation and Interactive Installation. In this case, we "
+"use Non-Interactive Installation."
+msgstr ""
+
+#: ../../Tigergraph.rst:28
+msgid "Interactive Installation"
+msgstr ""
+
+#: ../../Tigergraph.rst:30
+msgid ""
+"Interactive installation allows the user to choose a username and "
+"installation file paths besides the defaults. The filename of your "
+"package may vary depending on the product edition and version. For the "
+"examples here, we use the filename tigergraph-<version>.tar.gz, which "
+"should be replaced by the actual filename of your package."
+msgstr ""
+
+#: ../../Tigergraph.rst:35 ../../Tigergraph.rst:113
+msgid "Step 1  : Extract the package"
+msgstr ""
+
+#: ../../Tigergraph.rst:37 ../../Tigergraph.rst:115
+msgid ""
+"Extract TigerGraph package ``tigergraph-<version>-offline`` into a folder"
+" using this command:"
+msgstr ""
+
+#: ../../Tigergraph.rst:44
+msgid "Step 2: Run installation script"
+msgstr ""
+
+#: ../../Tigergraph.rst:46
+msgid ""
+"Navigate to the ``tigergraph-<version>-offline`` folder and run the "
+"install.sh script with the following commands:"
+msgstr ""
+
+#: ../../Tigergraph.rst:54
+msgid ""
+"The installer will ask for the following information. You may choose to "
+"hit Enter to skip and use the system default or enter a new value:"
+msgstr ""
+
+#: ../../Tigergraph.rst:56
+msgid "Your agreement to the License Terms and Conditions"
+msgstr ""
+
+#: ../../Tigergraph.rst:57
+msgid "Your license key (not applicable for Enterprise Free)"
+msgstr ""
+
+#: ../../Tigergraph.rst:58
+msgid ""
+"Username for the Linux user who will own and manage the TigerGraph "
+"platform"
+msgstr ""
+
+#: ../../Tigergraph.rst:60
+msgid ""
+"The installer creates a Linux user with this username who is the only "
+"authorized user that can run gadmin commands to manage the TigerGraph "
+"Platform. If the installation and data folders are modified from their "
+"defaults, the newly created user must have"
+msgstr ""
+
+#: ../../Tigergraph.rst:63
+msgid ""
+"appropriate permissions for these folders. The installation folder "
+"requires read/write/execute access, and the other folders require "
+"read/write access."
+msgstr ""
+
+#: ../../Tigergraph.rst:66
+msgid ""
+"Password for the Linux user who will own and manage the TigerGraph "
+"platform"
+msgstr ""
+
+#: ../../Tigergraph.rst:67
+msgid "Path to where the installation folder will be"
+msgstr ""
+
+#: ../../Tigergraph.rst:68
+msgid "Path to where the data folder will be"
+msgstr ""
+
+#: ../../Tigergraph.rst:69
+msgid "Path to where the log folder will be"
+msgstr ""
+
+#: ../../Tigergraph.rst:70
+msgid "Path to where the temp folder will be"
+msgstr ""
+
+#: ../../Tigergraph.rst:71
+msgid "The SSH port for your machine"
+msgstr ""
+
+#: ../../Tigergraph.rst:74
+msgid "Step 3: Configure cluster settings"
+msgstr ""
+
+#: ../../Tigergraph.rst:76
+msgid ""
+"TigerGraph cluster configuration enables the graph database to be "
+"partitioned and distributed across multiple server nodes in a local "
+"network. After you have answered the questions described in the previous "
+"step, the installation script will ask for the following to complete "
+"cluster configuration:"
+msgstr ""
+
+#: ../../Tigergraph.rst:80
+msgid ""
+"The number of nodes in your cluster. Each node will be given an alias "
+"following the input (m1, m2, m3, etc.)"
+msgstr ""
+
+#: ../../Tigergraph.rst:82
+msgid "If this is a single-node installation, enter 1"
+msgstr ""
+
+#: ../../Tigergraph.rst:83
+msgid "The IP address of each node"
+msgstr ""
+
+#: ../../Tigergraph.rst:84
+msgid "Username and credentials information of the sudo user"
+msgstr ""
+
+#: ../../Tigergraph.rst:86
+msgid ""
+"Every machine in the cluster must have a sudo user with the same username"
+" and password or SSH key."
+msgstr ""
+
+#: ../../Tigergraph.rst:87
+msgid "Permission to set NTP time synchronization"
+msgstr ""
+
+#: ../../Tigergraph.rst:88
+msgid "Permission to set firewall rules among the cluster nodes"
+msgstr ""
+
+#: ../../Tigergraph.rst:90
+msgid ""
+"After all the questions are answered, the script will proceed to "
+"installation as shown in this screenshot:"
+msgstr ""
+
+#: ../../Tigergraph.rst:-1
+msgid "Script Example"
+msgstr ""
+
+#: ../../Tigergraph.rst:96
+msgid ""
+"Step 4: Verify installation After installation is complete, you can "
+"switch to the Linux user who owns the platform (created in :ref:`Step 2`)"
+" with the following command :"
+msgstr ""
+
+#: ../../Tigergraph.rst:103
+msgid ""
+"After switching user correctly, you can confirm successful installation "
+"using ``gadmin status``."
+msgstr ""
+
+#: ../../Tigergraph.rst:108
+msgid "Non-Interactive Installation (used)"
+msgstr ""
+
+#: ../../Tigergraph.rst:110
+msgid ""
+"There are a few steps needed to be done in order to have TigerGraph "
+"running in your system:"
+msgstr ""
+
+#: ../../Tigergraph.rst:122
+msgid "Step 2: Configure installation settings"
+msgstr ""
+
+#: ../../Tigergraph.rst:124
+msgid ""
+"Navigate to the ``tigergraph-<version>-offline`` folder and find a file "
+"named ``install_conf.json``. For Non-interactive installation, you must "
+"review and modify ``install_conf.json`` file before running the "
+"installer."
+msgstr ""
+
+#: ../../Tigergraph.rst:127
+msgid "This is an example ``install_conf.json`` file :"
+msgstr ""
+
