@@ -1,4 +1,4 @@
 Troubleshooting
 ===============
 
-This is a page for every common errors that are encountered while installing apps.s
+Halaman ini adalah list dari QnA beserta Common Problem yang ditemukan sepanjang penggunaan setiap aplikasi.
