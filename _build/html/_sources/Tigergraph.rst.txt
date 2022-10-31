@@ -8,18 +8,18 @@ Installation
   :width: 800
   :alt: TigerGraph Logo
 
-There are a few requirements before installing TigerGraph in your system : 
+Ada beberapa hal yang diperlukan sebelum menginstal sistem TigerGraph:
 
-1.  You need to have at least one machine that fulfills the minimum requirements for hardware and software.
+1.	Satu atau lebih mesin yang memenuhi persyaratan minimum perangkat keras dan perangkat lunak
 
-2.  Access to Linux Super User with the same credentials on every machines.
+2.	Super User Linux dengan nama pengguna dan kredensial login yang sama di setiap mesin
 
-3.  License Key provided by TigerGraph.
+3.	License Key yang disediakan oleh TigerGraph (tidak berlaku untuk Enterprise Free)
 
-4.  TigerGraph system package, you can ask for this if you don't have it.
+4.	Paket sistem TigerGraph, jika belum memiliki paket sistem TigerGraph, Anda dapat memintanya
 
-5.  If you choose to use cluster, make sure that every conected machines have the same SSH port and it's has 
-    to be opened while the installation process still running.
+5.	Jika memasang cluster, pastikan setiap mesin memiliki port SSH yang sama dan port tetap terbuka selama instalasi
+
 
 There are two ways for you to install TigerGraph which are Non-Interactive Installation and Interactive Installation.
 In this case, we use Non-Interactive Installation.
@@ -104,27 +104,24 @@ After switching user correctly, you can confirm successful installation using ``
 
    
 
-Non-Interactive Installation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-There are a few steps needed to be done in order to have TigerGraph running in your system:
+Instalasi Non-Interaktif
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Step 1  : Extract the package
 +++++++++++++++++++++++++++++
 
-Extract TigerGraph package ``tigergraph-<version>-offline`` into a folder using this command:
+Ekstrak package TigerGraph ke dalam folder ``tigergraph-<version>-offline`` menggunakan command berikut : 
 
 .. code-block:: console
 
     $ tar -xzf tigergraph-<version>.tar.gz
 
-Step 2: Configure installation settings
-+++++++++++++++++++++++++++++++++++++++
+Step 2: Konfigurasi pengaturan instalasinya
++++++++++++++++++++++++++++++++++++++++++++
 
-Navigate to the ``tigergraph-<version>-offline`` folder and find a file named ``install_conf.json``. For Non-interactive
-installation, you must review and modify ``install_conf.json`` file before running the installer.
+Konfigurasi pengaturan instalasinya melalui file ``install-conf.json`` di dalam folder ``tigergraph-<version>-offline``, 
 
-This is an example ``install_conf.json`` file : 
+Isi file ``install_conf.json`` seperti petunjuk di bawah ini :
 
 .. code-block:: json
 
@@ -176,47 +173,47 @@ This is an example ``install_conf.json`` file :
         }
     }
 
-Description of all the fields used in the config file:
+Deskripsi masing-masing key dari config file di atas adalah sebagai berikut :
 
 * ``"BasicConfig"``
 
-  * ``"TigerGraph"`` : Information about the Linux user that will be created by the installer who owns and manages the TigerGraph platform.
+  * ``"TigerGraph"`` : Informasi tentang User Linux yang akan dibuat oleh installer dan nantinya akan menjadi pemilik dan pengelola platform TigerGraph
 
-    * ``"UserName"`` : Username of the Linux user.
-    * ``"Password"`` : Password of the Linux user.
-    * ``"SSHPort"``  : Port number used to establish SSH connections.
-    * ``"PrivateKeyFile"`` (Optional) : Absolute path to a valid private key file. If left empty, TigerGraph will generate one named ```tigergraph.rsa`` automatically.
-    * ``"PublicKeyFile"`` (Optional) : Absolute path to a valid public key file. If left empty, TigerGraph will generate one named ``tigergraph.pub`` automatically.
+    * ``"UserName"`` : Username dari user Linux.
+    * ``"Password"`` : Password dari user Linux.
+    * ``"SSHPort"``  : Port yang digunakan untuk membuat koneksi SSH.
+    * ``"PrivateKeyFile"`` (Opsional) : Lokasi file private key. Jika kosong, TigerGraph akan otomatis membuat file dengan nama ```tigergraph.rsa``.
+    * ``"PublicKeyFile"`` (Opsional) : Lokasi file public key. Jika kosong, TigerGraph akan otomatis membuat file dengan nama  ``tigergraph.pub``.
 
   * ``"RootDir"``
-    * ``"AppRoot"`` : Absolute path to where application folder will be.
-    * ``"DataRoot"`` : Absolute path to where the data folder will be.
-    * ``"LogRoot"``  : Absolute path to where the log folder will be.
-    * ``"TempRoot"`` : Absolute path to where the temp folder will be.
+    * ``"AppRoot"`` : Lokasi folder aplikasi berada..
+    * ``"DataRoot"`` : Lokasi folder data berada.
+    * ``"LogRoot"``  : Lokasi folder log berada.
+    * ``"TempRoot"`` : Lokasi folder temp berada.
 
-  * ``"License"`` : Your TigerGraph license string.
-  * ``"Node List"`` : A JSON array of the nodes in the cluster. Each machine in the cluster is defined as a key-value pair, where the key is a machine alias (m1, m2, m3, etc.) and the value is the IP address of the node.
+  * ``"License"`` : Lisensi TigerGraph yang akan diinstall.
+  * ``"Node List"`` : Array JSON dari setiap node dalam cluster, dengan <key>-nya adalah nama alias dari setiap mesin dan <value> diisi dengan alamat IP dari setiap mesin. 
 
 * ``"AdvancedConfig"``
 
-  * ``"ClusterConfig"`` : Cluster configurations
+  * ``"ClusterConfig"`` : Konfigurasi Cluster
 
-    * ``"LoginConfig"`` : Login configurations
+    * ``"LoginConfig"`` : Konfigurasi Login
 
-      * ``"SudoUser"`` : Username of the sudo user who will be used to execute the installation on all nodes.
-      * ``"Method"``  : Authentication method for SSH. Enter ``"P"``` to use password authentication and ``"K"`` to use key-based authentication. If you use key-based authentication, the sudo user you are providing must have password-less sudo access on all nodes in the cluster.
-      * ``"P"`` : Password of the sudo user.
-      * ``"K"`` : Absolute path to the SSH key to be used to authenticate the sudo user.
+      * ``"SudoUser"`` : Username dari sudo user yang akan melakukan penginstalan di semua node.
+      * ``"Method"``  : Metode otentikasi untuk SSH. Isi ``"P"`` untuk menggunakan password authentication atau ``"K"`` untuk menggunakan key-based authentication. Jika menggunakan key-based authentication, sudo user harus bersifat password-less sudo access di semua node di cluster.
+      * ``"P"`` : Password dari sudo user.
+      * ``"K"`` : Lokasi SSH key yang akan digunakan untuk otentikasi sudo user.
 
-    * ``"ReplicationFactor"`` : Replication factor of the cluster.
+    * ``"ReplicationFactor"`` : Faktor Replikasi dari cluster.
 
-      * If you would like to enable the High Availability (HA) feature, please make sure you have at least 3 nodes in the cluster and set the replication factor to be greater than 1. For example, if your cluster has 6 nodes, you could set the replication factor to be 2 or 3. If you set the replication factor to be 2, then the partitioning factor will be 6 / 2 = 3. Therefore, 3 nodes will be used for one copy of the data, and the other 3 nodes will be used as a replica copy of the data.
-      * Ensure that the total number of nodes can be fully divided by the replication factor. Otherwise, some nodes may not be utilized as parts of the HA cluster.
+      * Jika semisalnya ingin mengaktifkan fitur High Availability (HA), pastikan minimal ada 3 node di dalam cluster dan set nilai ReplicationFactor lebih besar dari 1. Contoh, jika memiliki 6 node di dalam cluster, set nilai ReplicationFactor menjadi 2 atau  3. Semisalkan 2, maka faktor partisinya menjadi 6 / 2 = 3 , di mana 3 node akan digunakan untuk satu salinan data, dan 3 node lainnya akan digunakan sebagai salinan replika data.
+      * Jumlah node harus habis dibagi nilai ReplicationFactor, jika tidak maka beberapa node tidak dapat digunakan sebagai bagian dari cluster HA.
 
-Step 3: Run install script with -n option
-+++++++++++++++++++++++++++++++++++++++++
+Step 3: Jalankan script 
++++++++++++++++++++++++
 
-Start the non-interactive installation process by running the install.sh script with the -n option:
+Jalankan script install.sh dengan flag -n seperti kode dibawah untuk meng-install TigerGraph dan tunggu beberapa saat.
 
 .. code-block:: console
   

@@ -48,10 +48,10 @@
 <li class="toctree-l4"><a class="reference internal" href="#step-3-configure-cluster-settings">Step 3: Configure cluster settings</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#non-interactive-installation">Non-Interactive Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#instalasi-non-interaktif">Instalasi Non-Interaktif</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#id1">Step 1  : Extract the package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#step-2-configure-installation-settings">Step 2: Configure installation settings</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#step-3-run-install-script-with-n-option">Step 3: Run install script with -n option</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-konfigurasi-pengaturan-instalasinya">Step 2: Konfigurasi pengaturan instalasinya</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-jalankan-script">Step 3: Jalankan script</a></li>
 </ul>
 </li>
 </ul>
@@ -91,14 +91,13 @@
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
 <a class="reference internal image-reference" href="_images/TGLogo.png"><img alt="TigerGraph Logo" src="_images/TGLogo.png" style="width: 800px;" /></a>
-<p>There are a few requirements before installing TigerGraph in your system :</p>
+<p>Ada beberapa hal yang diperlukan sebelum menginstal sistem TigerGraph:</p>
 <ol class="arabic simple">
-<li><p>You need to have at least one machine that fulfills the minimum requirements for hardware and software.</p></li>
-<li><p>Access to Linux Super User with the same credentials on every machines.</p></li>
-<li><p>License Key provided by TigerGraph.</p></li>
-<li><p>TigerGraph system package, you can ask for this if you don’t have it.</p></li>
-<li><p>If you choose to use cluster, make sure that every conected machines have the same SSH port and it’s has
-to be opened while the installation process still running.</p></li>
+<li><p>Satu atau lebih mesin yang memenuhi persyaratan minimum perangkat keras dan perangkat lunak</p></li>
+<li><p>Super User Linux dengan nama pengguna dan kredensial login yang sama di setiap mesin</p></li>
+<li><p>License Key yang disediakan oleh TigerGraph (tidak berlaku untuk Enterprise Free)</p></li>
+<li><p>Paket sistem TigerGraph, jika belum memiliki paket sistem TigerGraph, Anda dapat memintanya</p></li>
+<li><p>Jika memasang cluster, pastikan setiap mesin memiliki port SSH yang sama dan port tetap terbuka selama instalasi</p></li>
 </ol>
 <p>There are two ways for you to install TigerGraph which are Non-Interactive Installation and Interactive Installation.
 In this case, we use Non-Interactive Installation.</p>
@@ -180,21 +179,19 @@ After installation is complete, you can switch to the Linux user who owns the pl
 <p>After switching user correctly, you can confirm successful installation using <code class="docutils literal notranslate"><span class="pre">gadmin</span> <span class="pre">status</span></code>.</p>
 </section>
 </section>
-<section id="non-interactive-installation">
-<h3>Non-Interactive Installation<a class="headerlink" href="#non-interactive-installation" title="Permalink to this heading"></a></h3>
-<p>There are a few steps needed to be done in order to have TigerGraph running in your system:</p>
+<section id="instalasi-non-interaktif">
+<h3>Instalasi Non-Interaktif<a class="headerlink" href="#instalasi-non-interaktif" title="Permalink to this heading"></a></h3>
 <section id="id1">
 <h4>Step 1  : Extract the package<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
-<p>Extract TigerGraph package <code class="docutils literal notranslate"><span class="pre">tigergraph-&lt;version&gt;-offline</span></code> into a folder using this command:</p>
+<p>Ekstrak package TigerGraph ke dalam folder <code class="docutils literal notranslate"><span class="pre">tigergraph-&lt;version&gt;-offline</span></code> menggunakan command berikut :</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>tar -xzf tigergraph-&lt;version&gt;.tar.gz
 </pre></div>
 </div>
 </section>
-<section id="step-2-configure-installation-settings">
-<h4>Step 2: Configure installation settings<a class="headerlink" href="#step-2-configure-installation-settings" title="Permalink to this heading"></a></h4>
-<p>Navigate to the <code class="docutils literal notranslate"><span class="pre">tigergraph-&lt;version&gt;-offline</span></code> folder and find a file named <code class="docutils literal notranslate"><span class="pre">install_conf.json</span></code>. For Non-interactive
-installation, you must review and modify <code class="docutils literal notranslate"><span class="pre">install_conf.json</span></code> file before running the installer.</p>
-<p>This is an example <code class="docutils literal notranslate"><span class="pre">install_conf.json</span></code> file :</p>
+<section id="step-2-konfigurasi-pengaturan-instalasinya">
+<h4>Step 2: Konfigurasi pengaturan instalasinya<a class="headerlink" href="#step-2-konfigurasi-pengaturan-instalasinya" title="Permalink to this heading"></a></h4>
+<p>Konfigurasi pengaturan instalasinya melalui file <code class="docutils literal notranslate"><span class="pre">install-conf.json</span></code> di dalam folder <code class="docutils literal notranslate"><span class="pre">tigergraph-&lt;version&gt;-offline</span></code>,</p>
+<p>Isi file <code class="docutils literal notranslate"><span class="pre">install_conf.json</span></code> seperti petunjuk di bawah ini :</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;BasicConfig&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="nt">&quot;TigerGraph&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -244,44 +241,44 @@ installation, you must review and modify <code class="docutils literal notransla
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Description of all the fields used in the config file:</p>
+<p>Deskripsi masing-masing key dari config file di atas adalah sebagai berikut :</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;BasicConfig&quot;</span></code></p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;TigerGraph&quot;</span></code> : Information about the Linux user that will be created by the installer who owns and manages the TigerGraph platform.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;TigerGraph&quot;</span></code> : Informasi tentang User Linux yang akan dibuat oleh installer dan nantinya akan menjadi pemilik dan pengelola platform TigerGraph</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;UserName&quot;</span></code> : Username of the Linux user.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;Password&quot;</span></code> : Password of the Linux user.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;SSHPort&quot;</span></code>  : Port number used to establish SSH connections.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;PrivateKeyFile&quot;</span></code> (Optional) : Absolute path to a valid private key file. If left empty, TigerGraph will generate one named <code class="docutils literal notranslate"><span class="pre">`tigergraph.rsa</span></code> automatically.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;PublicKeyFile&quot;</span></code> (Optional) : Absolute path to a valid public key file. If left empty, TigerGraph will generate one named <code class="docutils literal notranslate"><span class="pre">tigergraph.pub</span></code> automatically.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;UserName&quot;</span></code> : Username dari user Linux.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;Password&quot;</span></code> : Password dari user Linux.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;SSHPort&quot;</span></code>  : Port yang digunakan untuk membuat koneksi SSH.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;PrivateKeyFile&quot;</span></code> (Opsional) : Lokasi file private key. Jika kosong, TigerGraph akan otomatis membuat file dengan nama <code class="docutils literal notranslate"><span class="pre">`tigergraph.rsa</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;PublicKeyFile&quot;</span></code> (Opsional) : Lokasi file public key. Jika kosong, TigerGraph akan otomatis membuat file dengan nama  <code class="docutils literal notranslate"><span class="pre">tigergraph.pub</span></code>.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;RootDir&quot;</span></code>
-* <code class="docutils literal notranslate"><span class="pre">&quot;AppRoot&quot;</span></code> : Absolute path to where application folder will be.
-* <code class="docutils literal notranslate"><span class="pre">&quot;DataRoot&quot;</span></code> : Absolute path to where the data folder will be.
-* <code class="docutils literal notranslate"><span class="pre">&quot;LogRoot&quot;</span></code>  : Absolute path to where the log folder will be.
-* <code class="docutils literal notranslate"><span class="pre">&quot;TempRoot&quot;</span></code> : Absolute path to where the temp folder will be.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;License&quot;</span></code> : Your TigerGraph license string.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;Node</span> <span class="pre">List&quot;</span></code> : A JSON array of the nodes in the cluster. Each machine in the cluster is defined as a key-value pair, where the key is a machine alias (m1, m2, m3, etc.) and the value is the IP address of the node.</p></li>
+* <code class="docutils literal notranslate"><span class="pre">&quot;AppRoot&quot;</span></code> : Lokasi folder aplikasi berada..
+* <code class="docutils literal notranslate"><span class="pre">&quot;DataRoot&quot;</span></code> : Lokasi folder data berada.
+* <code class="docutils literal notranslate"><span class="pre">&quot;LogRoot&quot;</span></code>  : Lokasi folder log berada.
+* <code class="docutils literal notranslate"><span class="pre">&quot;TempRoot&quot;</span></code> : Lokasi folder temp berada.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;License&quot;</span></code> : Lisensi TigerGraph yang akan diinstall.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;Node</span> <span class="pre">List&quot;</span></code> : Array JSON dari setiap node dalam cluster, dengan &lt;key&gt;-nya adalah nama alias dari setiap mesin dan &lt;value&gt; diisi dengan alamat IP dari setiap mesin.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;AdvancedConfig&quot;</span></code></p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;ClusterConfig&quot;</span></code> : Cluster configurations</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;ClusterConfig&quot;</span></code> : Konfigurasi Cluster</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;LoginConfig&quot;</span></code> : Login configurations</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;LoginConfig&quot;</span></code> : Konfigurasi Login</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;SudoUser&quot;</span></code> : Username of the sudo user who will be used to execute the installation on all nodes.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;Method&quot;</span></code>  : Authentication method for SSH. Enter <code class="docutils literal notranslate"><span class="pre">&quot;P&quot;`</span></code> to use password authentication and <code class="docutils literal notranslate"><span class="pre">&quot;K&quot;</span></code> to use key-based authentication. If you use key-based authentication, the sudo user you are providing must have password-less sudo access on all nodes in the cluster.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;P&quot;</span></code> : Password of the sudo user.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;K&quot;</span></code> : Absolute path to the SSH key to be used to authenticate the sudo user.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;SudoUser&quot;</span></code> : Username dari sudo user yang akan melakukan penginstalan di semua node.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;Method&quot;</span></code>  : Metode otentikasi untuk SSH. Isi <code class="docutils literal notranslate"><span class="pre">&quot;P&quot;</span></code> untuk menggunakan password authentication atau <code class="docutils literal notranslate"><span class="pre">&quot;K&quot;</span></code> untuk menggunakan key-based authentication. Jika menggunakan key-based authentication, sudo user harus bersifat password-less sudo access di semua node di cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;P&quot;</span></code> : Password dari sudo user.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;K&quot;</span></code> : Lokasi SSH key yang akan digunakan untuk otentikasi sudo user.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;ReplicationFactor&quot;</span></code> : Replication factor of the cluster.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;ReplicationFactor&quot;</span></code> : Faktor Replikasi dari cluster.</p>
 <ul>
-<li><p>If you would like to enable the High Availability (HA) feature, please make sure you have at least 3 nodes in the cluster and set the replication factor to be greater than 1. For example, if your cluster has 6 nodes, you could set the replication factor to be 2 or 3. If you set the replication factor to be 2, then the partitioning factor will be 6 / 2 = 3. Therefore, 3 nodes will be used for one copy of the data, and the other 3 nodes will be used as a replica copy of the data.</p></li>
-<li><p>Ensure that the total number of nodes can be fully divided by the replication factor. Otherwise, some nodes may not be utilized as parts of the HA cluster.</p></li>
+<li><p>Jika semisalnya ingin mengaktifkan fitur High Availability (HA), pastikan minimal ada 3 node di dalam cluster dan set nilai ReplicationFactor lebih besar dari 1. Contoh, jika memiliki 6 node di dalam cluster, set nilai ReplicationFactor menjadi 2 atau  3. Semisalkan 2, maka faktor partisinya menjadi 6 / 2 = 3 , di mana 3 node akan digunakan untuk satu salinan data, dan 3 node lainnya akan digunakan sebagai salinan replika data.</p></li>
+<li><p>Jumlah node harus habis dibagi nilai ReplicationFactor, jika tidak maka beberapa node tidak dapat digunakan sebagai bagian dari cluster HA.</p></li>
 </ul>
 </li>
 </ul>
@@ -290,9 +287,9 @@ installation, you must review and modify <code class="docutils literal notransla
 </li>
 </ul>
 </section>
-<section id="step-3-run-install-script-with-n-option">
-<h4>Step 3: Run install script with -n option<a class="headerlink" href="#step-3-run-install-script-with-n-option" title="Permalink to this heading"></a></h4>
-<p>Start the non-interactive installation process by running the install.sh script with the -n option:</p>
+<section id="step-3-jalankan-script">
+<h4>Step 3: Jalankan script<a class="headerlink" href="#step-3-jalankan-script" title="Permalink to this heading"></a></h4>
+<p>Jalankan script install.sh dengan flag -n seperti kode dibawah untuk meng-install TigerGraph dan tunggu beberapa saat.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo ./install.sh -n
 </pre></div>
 </div>
