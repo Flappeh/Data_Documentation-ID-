@@ -20,8 +20,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Test" href="Test.html" />
-    <link rel="prev" title="Welcome to Data Team’s Documentation" href="index.html" /> 
+    <link rel="next" title="Troubleshooting" href="Troubleshooting.html" />
+    <link rel="prev" title="Test" href="Test.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -40,16 +40,18 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Test.html">Test</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Tigergraph</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#interactive-installation">Interactive Installation</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#step-1-extract-the-package">Step 1  : Extract the package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#step-2-run-installation-script">Step 2: Run installation script</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#step-3-configure-cluster-settings">Step 3: Configure cluster settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#instalasi-interaktif">Instalasi Interaktif</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-ekstrak-package-tigergraph">Step 1:  Ekstrak package TigerGraph</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-jalankan-script-instalasi">Step 3: Jalankan script Instalasi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-konfigurasikan-pengaturan-kluster">Step 3: Konfigurasikan pengaturan kluster</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-verifikasi-instalasi">Step 4: Verifikasi instalasi</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#instalasi-non-interaktif">Instalasi Non-Interaktif</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id1">Step 1  : Extract the package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-extract-the-package">Step 1  : Extract the package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#step-2-konfigurasi-pengaturan-instalasinya">Step 2: Konfigurasi pengaturan instalasinya</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#step-3-jalankan-script">Step 3: Jalankan script</a></li>
 </ul>
@@ -58,7 +60,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Test.html">Test</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Troubleshooting.html">Troubleshooting</a></li>
 </ul>
 
@@ -101,88 +102,89 @@
 </ol>
 <p>There are two ways for you to install TigerGraph which are Non-Interactive Installation and Interactive Installation.
 In this case, we use Non-Interactive Installation.</p>
-<section id="interactive-installation">
-<h3>Interactive Installation<a class="headerlink" href="#interactive-installation" title="Permalink to this heading"></a></h3>
-<p>Interactive installation allows the user to choose a username and installation file paths besides the defaults.
-The filename of your package may vary depending on the product edition and version. For the examples here, we use
-the filename tigergraph-&lt;version&gt;.tar.gz, which should be replaced by the actual filename of your package.</p>
-<section id="step-1-extract-the-package">
-<h4>Step 1  : Extract the package<a class="headerlink" href="#step-1-extract-the-package" title="Permalink to this heading"></a></h4>
-<p>Extract TigerGraph package <code class="docutils literal notranslate"><span class="pre">tigergraph-&lt;version&gt;-offline</span></code> into a folder using this command:</p>
+<section id="instalasi-interaktif">
+<h3>Instalasi Interaktif<a class="headerlink" href="#instalasi-interaktif" title="Permalink to this heading"></a></h3>
+<p>Instalasi interaktif memungkinkan pengguna untuk memilih nama pengguna dan jalur file instalasi selain default.
+Nama file paket Anda dapat bervariasi tergantung pada edisi dan versi produk. Untuk contoh di sini, kami menggunakan
+nama file <code class="docutils literal notranslate"><span class="pre">tigergraph-&lt;version&gt;.tar.gz</span></code>, yang harus diganti dengan nama file sebenarnya dari file Anda.</p>
+<section id="step-1-ekstrak-package-tigergraph">
+<h4>Step 1:  Ekstrak package TigerGraph<a class="headerlink" href="#step-1-ekstrak-package-tigergraph" title="Permalink to this heading"></a></h4>
+<p>Ekstrak package TigerGraph ke dalam folder <code class="docutils literal notranslate"><span class="pre">tigergraph-&lt;version&gt;-offline</span></code> menggunakan command dibawah ini:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>tar -xzf tigergraph-&lt;version&gt;.tar.gz
 </pre></div>
 </div>
 </section>
-<section id="step-2-run-installation-script">
-<h4>Step 2: Run installation script<a class="headerlink" href="#step-2-run-installation-script" title="Permalink to this heading"></a></h4>
-<p>Navigate to the <code class="docutils literal notranslate"><span class="pre">tigergraph-&lt;version&gt;-offline</span></code> folder and run the install.sh script with the following commands:</p>
+<section id="step-3-jalankan-script-instalasi">
+<h4>Step 3: Jalankan script Instalasi<a class="headerlink" href="#step-3-jalankan-script-instalasi" title="Permalink to this heading"></a></h4>
+<p>Navigasi ke folder <code class="docutils literal notranslate"><span class="pre">tigergraph-&lt;version&gt;-offline</span></code> dan jalankan script install.sh dengan command:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span> tigergraph-&lt;version&gt;-offline
 <span class="gp"># </span>to install enterprise license
 <span class="gp">$ </span>sudo ./install.sh
 </pre></div>
 </div>
-<p>The installer will ask for the following information. You may choose to hit Enter to skip and use the system default or enter a new value:</p>
+<p>Installer akan menanyakan informasi berikut. Anda dapat memilih untuk menekan Enter untuk melewati dan menggunakan nilai-nilai default atau memasukkan nilai baru:</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p>Your agreement to the License Terms and Conditions</p></li>
-<li><p>Your license key (not applicable for Enterprise Free)</p></li>
-<li><p>Username for the Linux user who will own and manage the TigerGraph platform</p></li>
+<li><p>Persetujuan Anda terhadap Syarat dan Ketentuan Lisensi</p></li>
+<li><p>Kunci lisensi Anda (tidak berlaku untuk Enterprise Free)</p></li>
+<li><p>Nama pengguna untuk pengguna Linux yang akan memiliki dan mengelola platform TigerGraph</p></li>
 </ol>
 <blockquote>
 <div><ul class="simple">
-<li><p>The installer creates a Linux user with this username who is the only authorized user that can run
-gadmin commands to manage the TigerGraph Platform. If the installation and data folders are modified
-from their defaults, the newly created user must have</p></li>
-<li><p>appropriate permissions for these folders. The installation folder requires read/write/execute access,
-and the other folders require read/write access.</p></li>
+<li><p>Pemasang membuat pengguna Linux dengan nama pengguna ini yang merupakan satu-satunya pengguna resmi yang dapat menjalankan
+perintah gadmin untuk mengelola Platform TigerGraph. Jika folder instalasi dan data diubah
+dari defaultnya, pengguna yang baru dibuat harus memiliki izin yang sesuai untuk folder ini. Folder instalasi memerlukan akses baca/tulis/eksekusi,
+dan folder lain memerlukan akses baca/tulis.</p></li>
 </ul>
 </div></blockquote>
 <ol class="arabic simple" start="4">
-<li><p>Password for the Linux user who will own and manage the TigerGraph platform</p></li>
-<li><p>Path to where the installation folder will be</p></li>
-<li><p>Path to where the data folder will be</p></li>
-<li><p>Path to where the log folder will be</p></li>
-<li><p>Path to where the temp folder will be</p></li>
-<li><p>The SSH port for your machine</p></li>
+<li><p>Kata sandi untuk pengguna Linux yang akan memiliki dan mengelola platform TigerGraph</p></li>
+<li><p>Jalur ke tempat folder instalasi akan berada</p></li>
+<li><p>Jalur ke tempat folder data akan berada</p></li>
+<li><p>Jalur ke tempat folder log akan berada</p></li>
+<li><p>Jalur ke tempat folder temp akan berada</p></li>
+<li><p>Port SSH untuk mesin Anda</p></li>
 </ol>
 </div></blockquote>
 </section>
-<section id="step-3-configure-cluster-settings">
-<h4>Step 3: Configure cluster settings<a class="headerlink" href="#step-3-configure-cluster-settings" title="Permalink to this heading"></a></h4>
-<p>TigerGraph cluster configuration enables the graph database to be partitioned and distributed across multiple
-server nodes in a local network. After you have answered the questions described in the previous step, the installation
-script will ask for the following to complete cluster configuration:</p>
+<section id="step-3-konfigurasikan-pengaturan-kluster">
+<h4>Step 3: Konfigurasikan pengaturan kluster<a class="headerlink" href="#step-3-konfigurasikan-pengaturan-kluster" title="Permalink to this heading"></a></h4>
+<p>Konfigurasi klaster TigerGraph memungkinkan basis data grafik untuk dipartisi dan didistribusikan ke beberapa
+node server dalam jaringan lokal. Setelah Anda menjawab pertanyaan yang dijelaskan pada langkah sebelumnya, instalasi
+script akan meminta yang berikut untuk menyelesaikan konfigurasi cluster:</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p>The number of nodes in your cluster. Each node will be given an alias following the input (m1, m2, m3, etc.)</p>
+<li><p>Jumlah node di cluster Anda. Setiap node akan diberikan alias mengikuti input (m1, m2, m3, dst)</p>
 <ul class="simple">
-<li><p>If this is a single-node installation, enter 1</p></li>
+<li><p>Jika ini adalah instalasi single-node, masukkan 1</p></li>
 </ul>
 </li>
-<li><p>The IP address of each node</p></li>
-<li><p>Username and credentials information of the sudo user</p>
+<li><p>Alamat IP setiap node</p></li>
+<li><p>Nama pengguna dan informasi kredensial pengguna sudo</p>
 <ul class="simple">
-<li><p>Every machine in the cluster must have a sudo user with the same username and password or SSH key.</p></li>
+<li><p>Setiap mesin di cluster harus memiliki pengguna sudo dengan nama pengguna dan kata sandi atau kunci SSH yang sama.</p></li>
 </ul>
 </li>
-<li><p>Permission to set NTP time synchronization</p></li>
-<li><p>Permission to set firewall rules among the cluster nodes</p></li>
+<li><p>Izin untuk mengatur sinkronisasi waktu NTP</p></li>
+<li><p>Izin untuk menetapkan aturan firewall di antara node cluster</p></li>
 </ol>
 </div></blockquote>
-<p>After all the questions are answered, the script will proceed to installation as shown in this screenshot:</p>
+<p>Setelah semua pertanyaan dijawab, skrip akan melanjutkan ke instalasi seperti yang ditunjukkan pada screenshot ini:</p>
 <a class="reference internal image-reference" href="_images/FinishedScirpt.png"><img alt="Script Example" src="_images/FinishedScirpt.png" style="width: 800px;" /></a>
-<p>Step 4: Verify installation
-After installation is complete, you can switch to the Linux user who owns the platform (created in <span class="xref std std-ref">Step 2</span>) with the following command :</p>
+</section>
+<section id="step-4-verifikasi-instalasi">
+<h4>Step 4: Verifikasi instalasi<a class="headerlink" href="#step-4-verifikasi-instalasi" title="Permalink to this heading"></a></h4>
+<p>Setelah instalasi selesai, Anda dapat beralih ke pengguna Linux yang memiliki platform (dibuat di <span class="xref std std-ref">Langkah 2</span>) dengan perintah berikut:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>su &lt;username&gt;  <span class="c1"># default username: tigergraph</span>
 </pre></div>
 </div>
-<p>After switching user correctly, you can confirm successful installation using <code class="docutils literal notranslate"><span class="pre">gadmin</span> <span class="pre">status</span></code>.</p>
+<p>Setelah mengganti pengguna dengan benar, Anda dapat mengonfirmasi instalasi yang berhasil menggunakan <code class="docutils literal notranslate"><span class="pre">gadmin</span> <span class="pre">status</span></code>.</p>
 </section>
 </section>
 <section id="instalasi-non-interaktif">
 <h3>Instalasi Non-Interaktif<a class="headerlink" href="#instalasi-non-interaktif" title="Permalink to this heading"></a></h3>
-<section id="id1">
-<h4>Step 1  : Extract the package<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
+<section id="step-1-extract-the-package">
+<h4>Step 1  : Extract the package<a class="headerlink" href="#step-1-extract-the-package" title="Permalink to this heading"></a></h4>
 <p>Ekstrak package TigerGraph ke dalam folder <code class="docutils literal notranslate"><span class="pre">tigergraph-&lt;version&gt;-offline</span></code> menggunakan command berikut :</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>tar -xzf tigergraph-&lt;version&gt;.tar.gz
 </pre></div>
@@ -302,8 +304,8 @@ After installation is complete, you can switch to the Linux user who owns the pl
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Data Team’s Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Test.html" class="btn btn-neutral float-right" title="Test" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Test.html" class="btn btn-neutral float-left" title="Test" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Troubleshooting.html" class="btn btn-neutral float-right" title="Troubleshooting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

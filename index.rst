@@ -1,26 +1,26 @@
-Welcome to Data Team's Documentation
-====================================
+Selamat datang di Dokumentasi Tim Data
+======================================
 
-This page contains **every documentation** of tools you
-need to have a work setup on any of the projects that
-have been done in the past or currently are being worked on.
+Halaman ini berisi **setiap dokumentasi** alat yang Anda
+perlu memiliki pengaturan kerja pada salah satu proyek yang
+telah dilakukan di masa lalu atau sedang dikerjakan.
 
 .. note::
 
-   Should there be any material that aren't mentioned in this docs, feel
-   free to message me on any topic or contribute to this docs!
+   Jika ada materi yang tidak disebutkan dalam dokumen ini, silahkan
+   kontak saya mengenai topik apa pun atau anda dapat berkontribusi pada dokumen ini!
 
-Contents
---------
+Konten
+------
 
 .. toctree::
-   Tigergraph
    Test
+   Tigergraph
    Troubleshooting
 
 
-Needed to add/update
---------------------
+Butuh Ditambahkan/Update
+------------------------
 
 1. Troubleshooting VM partition
 2. How to install and use ngrok

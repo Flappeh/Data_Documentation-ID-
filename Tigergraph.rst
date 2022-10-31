@@ -24,26 +24,26 @@ Ada beberapa hal yang diperlukan sebelum menginstal sistem TigerGraph:
 There are two ways for you to install TigerGraph which are Non-Interactive Installation and Interactive Installation.
 In this case, we use Non-Interactive Installation.
 
-Interactive Installation
-~~~~~~~~~~~~~~~~~~~~~~~~
+Instalasi Interaktif
+~~~~~~~~~~~~~~~~~~~~
 
-Interactive installation allows the user to choose a username and installation file paths besides the defaults. 
-The filename of your package may vary depending on the product edition and version. For the examples here, we use 
-the filename tigergraph-<version>.tar.gz, which should be replaced by the actual filename of your package.
+Instalasi interaktif memungkinkan pengguna untuk memilih nama pengguna dan jalur file instalasi selain default.
+Nama file paket Anda dapat bervariasi tergantung pada edisi dan versi produk. Untuk contoh di sini, kami menggunakan
+nama file ``tigergraph-<version>.tar.gz``, yang harus diganti dengan nama file sebenarnya dari file Anda.
 
-Step 1  : Extract the package
-+++++++++++++++++++++++++++++
+Step 1:  Ekstrak package TigerGraph 
++++++++++++++++++++++++++++++++++++
 
-Extract TigerGraph package ``tigergraph-<version>-offline`` into a folder using this command:
+Ekstrak package TigerGraph ke dalam folder ``tigergraph-<version>-offline`` menggunakan command dibawah ini: 
 
 .. code-block:: console
 
     $ tar -xzf tigergraph-<version>.tar.gz
 
-Step 2: Run installation script
-+++++++++++++++++++++++++++++++
+Step 3: Jalankan script Instalasi
++++++++++++++++++++++++++++++++++
 
-Navigate to the ``tigergraph-<version>-offline`` folder and run the install.sh script with the following commands:
+Navigasi ke folder ``tigergraph-<version>-offline`` dan jalankan script install.sh dengan command:
 
 .. code-block:: console
 
@@ -51,57 +51,57 @@ Navigate to the ``tigergraph-<version>-offline`` folder and run the install.sh s
     # to install enterprise license
     $ sudo ./install.sh
     
-The installer will ask for the following information. You may choose to hit Enter to skip and use the system default or enter a new value:
+Installer akan menanyakan informasi berikut. Anda dapat memilih untuk menekan Enter untuk melewati dan menggunakan nilai-nilai default atau memasukkan nilai baru:
 
-  #. Your agreement to the License Terms and Conditions
-  #. Your license key (not applicable for Enterprise Free)
-  #. Username for the Linux user who will own and manage the TigerGraph platform
+  #. Persetujuan Anda terhadap Syarat dan Ketentuan Lisensi
+  #. Kunci lisensi Anda (tidak berlaku untuk Enterprise Free)
+  #. Nama pengguna untuk pengguna Linux yang akan memiliki dan mengelola platform TigerGraph
   
-    - The installer creates a Linux user with this username who is the only authorized user that can run 
-      gadmin commands to manage the TigerGraph Platform. If the installation and data folders are modified 
-      from their defaults, the newly created user must have
-    - appropriate permissions for these folders. The installation folder requires read/write/execute access, 
-      and the other folders require read/write access. 
+    - Pemasang membuat pengguna Linux dengan nama pengguna ini yang merupakan satu-satunya pengguna resmi yang dapat menjalankan
+      perintah gadmin untuk mengelola Platform TigerGraph. Jika folder instalasi dan data diubah
+      dari defaultnya, pengguna yang baru dibuat harus memiliki izin yang sesuai untuk folder ini. Folder instalasi memerlukan akses baca/tulis/eksekusi,
+      dan folder lain memerlukan akses baca/tulis.
 
-  4. Password for the Linux user who will own and manage the TigerGraph platform
-  #. Path to where the installation folder will be
-  #. Path to where the data folder will be
-  #. Path to where the log folder will be
-  #. Path to where the temp folder will be
-  #. The SSH port for your machine
+  4. Kata sandi untuk pengguna Linux yang akan memiliki dan mengelola platform TigerGraph
+  #. Jalur ke tempat folder instalasi akan berada
+  #. Jalur ke tempat folder data akan berada
+  #. Jalur ke tempat folder log akan berada
+  #. Jalur ke tempat folder temp akan berada
+  #. Port SSH untuk mesin Anda
 
-Step 3: Configure cluster settings
-++++++++++++++++++++++++++++++++++
+Step 3: Konfigurasikan pengaturan kluster
++++++++++++++++++++++++++++++++++++++++++
 
-TigerGraph cluster configuration enables the graph database to be partitioned and distributed across multiple 
-server nodes in a local network. After you have answered the questions described in the previous step, the installation 
-script will ask for the following to complete cluster configuration:
+Konfigurasi klaster TigerGraph memungkinkan basis data grafik untuk dipartisi dan didistribusikan ke beberapa
+node server dalam jaringan lokal. Setelah Anda menjawab pertanyaan yang dijelaskan pada langkah sebelumnya, instalasi
+script akan meminta yang berikut untuk menyelesaikan konfigurasi cluster:
 
-   #. The number of nodes in your cluster. Each node will be given an alias following the input (m1, m2, m3, etc.)
+   #. Jumlah node di cluster Anda. Setiap node akan diberikan alias mengikuti input (m1, m2, m3, dst)
    
-      * If this is a single-node installation, enter 1
-   #. The IP address of each node
-   #. Username and credentials information of the sudo user
+      * Jika ini adalah instalasi single-node, masukkan 1
+   #. Alamat IP setiap node
+   #. Nama pengguna dan informasi kredensial pengguna sudo
    
-      * Every machine in the cluster must have a sudo user with the same username and password or SSH key.
-   #. Permission to set NTP time synchronization
-   #. Permission to set firewall rules among the cluster nodes
+      * Setiap mesin di cluster harus memiliki pengguna sudo dengan nama pengguna dan kata sandi atau kunci SSH yang sama.
+   #. Izin untuk mengatur sinkronisasi waktu NTP
+   #. Izin untuk menetapkan aturan firewall di antara node cluster
 
-After all the questions are answered, the script will proceed to installation as shown in this screenshot:
+Setelah semua pertanyaan dijawab, skrip akan melanjutkan ke instalasi seperti yang ditunjukkan pada screenshot ini:
 
 .. image:: pictures/FinishedScirpt.png
   :width: 800
   :alt: Script Example
 
-Step 4: Verify installation
-After installation is complete, you can switch to the Linux user who owns the platform (created in :ref:`Step 2`) with the following command :
+Step 4: Verifikasi instalasi
+++++++++++++++++++++++++++++
+
+Setelah instalasi selesai, Anda dapat beralih ke pengguna Linux yang memiliki platform (dibuat di :ref:`Langkah 2`) dengan perintah berikut:
 
 .. code-block:: console
 
     $ su <username>  # default username: tigergraph
 
-After switching user correctly, you can confirm successful installation using ``gadmin status``. 
-
+Setelah mengganti pengguna dengan benar, Anda dapat mengonfirmasi instalasi yang berhasil menggunakan ``gadmin status``.
    
 
 Instalasi Non-Interaktif
