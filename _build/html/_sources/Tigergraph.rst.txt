@@ -104,7 +104,7 @@ After switching user correctly, you can confirm successful installation using ``
 
    
 
-Non-Interactive Installation (used)
+Non-Interactive Installation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There are a few steps needed to be done in order to have TigerGraph running in your system:
@@ -175,3 +175,52 @@ This is an example ``install_conf.json`` file :
             }
         }
     }
+
+Description of all the fields used in the config file:
+
+* ``"BasicConfig"``
+
+  * ``"TigerGraph"`` : Information about the Linux user that will be created by the installer who owns and manages the TigerGraph platform.
+
+    * ``"UserName"`` : Username of the Linux user.
+    * ``"Password"`` : Password of the Linux user.
+    * ``"SSHPort"``  : Port number used to establish SSH connections.
+    * ``"PrivateKeyFile"`` (Optional) : Absolute path to a valid private key file. If left empty, TigerGraph will generate one named ```tigergraph.rsa`` automatically.
+    * ``"PublicKeyFile"`` (Optional) : Absolute path to a valid public key file. If left empty, TigerGraph will generate one named ``tigergraph.pub`` automatically.
+
+  * ``"RootDir"``
+    * ``"AppRoot"`` : Absolute path to where application folder will be.
+    * ``"DataRoot"`` : Absolute path to where the data folder will be.
+    * ``"LogRoot"``  : Absolute path to where the log folder will be.
+    * ``"TempRoot"`` : Absolute path to where the temp folder will be.
+
+  * ``"License"`` : Your TigerGraph license string.
+  * ``"Node List"`` : A JSON array of the nodes in the cluster. Each machine in the cluster is defined as a key-value pair, where the key is a machine alias (m1, m2, m3, etc.) and the value is the IP address of the node.
+
+* ``"AdvancedConfig"``
+
+  * ``"ClusterConfig"`` : Cluster configurations
+
+    * ``"LoginConfig"`` : Login configurations
+
+      * ``"SudoUser"`` : Username of the sudo user who will be used to execute the installation on all nodes.
+      * ``"Method"``  : Authentication method for SSH. Enter ``"P"``` to use password authentication and ``"K"`` to use key-based authentication. If you use key-based authentication, the sudo user you are providing must have password-less sudo access on all nodes in the cluster.
+      * ``"P"`` : Password of the sudo user.
+      * ``"K"`` : Absolute path to the SSH key to be used to authenticate the sudo user.
+
+    * ``"ReplicationFactor"`` : Replication factor of the cluster.
+
+      * If you would like to enable the High Availability (HA) feature, please make sure you have at least 3 nodes in the cluster and set the replication factor to be greater than 1. For example, if your cluster has 6 nodes, you could set the replication factor to be 2 or 3. If you set the replication factor to be 2, then the partitioning factor will be 6 / 2 = 3. Therefore, 3 nodes will be used for one copy of the data, and the other 3 nodes will be used as a replica copy of the data.
+      * Ensure that the total number of nodes can be fully divided by the replication factor. Otherwise, some nodes may not be utilized as parts of the HA cluster.
+
+Step 3: Run install script with -n option
++++++++++++++++++++++++++++++++++++++++++
+
+Start the non-interactive installation process by running the install.sh script with the -n option:
+
+.. code-block:: console
+  
+  $ sudo ./install.sh -n
+
+
+   

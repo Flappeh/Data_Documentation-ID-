@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Data_Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-31 10:43+0700\n"
+"POT-Creation-Date: 2022-10-31 13:58+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,18 +32,34 @@ msgstr ""
 msgid "Contents"
 msgstr ""
 
-#: ../../index.rst:22
-msgid "Indices and tables"
-msgstr ""
-
-#: ../../index.rst:24
-msgid ":ref:`genindex`"
+#: ../../index.rst:23
+msgid "Needed to add/update"
 msgstr ""
 
 #: ../../index.rst:25
-msgid ":ref:`modindex`"
+msgid "Troubleshooting VM partition"
 msgstr ""
 
 #: ../../index.rst:26
+msgid "How to install and use ngrok"
+msgstr ""
+
+#: ../../index.rst:27
+msgid "GSQL Structure"
+msgstr ""
+
+#: ../../index.rst:31
+msgid "Indices and tables"
+msgstr ""
+
+#: ../../index.rst:33
+msgid ":ref:`genindex`"
+msgstr ""
+
+#: ../../index.rst:34
+msgid ":ref:`modindex`"
+msgstr ""
+
+#: ../../index.rst:35
 msgid ":ref:`search`"
 msgstr ""

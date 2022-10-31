@@ -18,6 +18,15 @@ Contents
    Test
    Troubleshooting
 
+
+Needed to add/update
+--------------------
+
+1. Troubleshooting VM partition
+2. How to install and use ngrok
+3. GSQL Structure
+
+
 Indices and tables
 ==================
 
